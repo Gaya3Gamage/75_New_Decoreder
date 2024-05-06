@@ -1,6 +1,7 @@
 package com.decoder.decoder.Service;
 
 import com.decoder.decoder.Entity.SongMaoMessageRecord;
+import com.decoder.decoder.MessageDecoder;
 import com.decoder.decoder.repo.SongMaoMessageRecordRepo;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,12 @@ public class MessageRecordService {
             log.info("Message record saved successfully: {}", messageRecord);
         } catch (Exception e) {
             log.error("Failed to save message record: {}", messageRecord, e);
-            throw e; // You may want to handle this exception according to your application's needs
+            throw e;
         }
     }
 }
+
+
+
+
+
